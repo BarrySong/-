@@ -41,14 +41,6 @@ export const Zone: React.FC<ZoneProps> = ({ zone, seats, onSeatClick }) => {
         {renderSeat(2, true)}
         {renderSeat(3, true)}
       </div>
-      
-      {/* Decor: Plants */}
-      <div className="absolute -top-3 left-1/2 -translate-x-1/2 flex gap-1">
-         <div className="w-3 h-3 rounded-full bg-white border border-slate-800 flex items-center justify-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-slate-400"></div>
-         </div>
-         <div className="w-2 h-2 rounded-full bg-white border border-slate-800 mt-1"></div>
-      </div>
     </div>
   );
 };

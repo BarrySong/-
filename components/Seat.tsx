@@ -25,9 +25,6 @@ export const Seat: React.FC<SeatProps> = ({ data, onClick, className }) => {
       {isOccupied ? (
         <>
           <span className="font-bold truncate w-full text-center px-1">{data.occupantName}</span>
-          {data.occupantTitle && (
-            <span className="scale-75 opacity-70 truncate w-full text-center">{data.occupantTitle}</span>
-          )}
         </>
       ) : (
         <span className="opacity-0 group-hover:opacity-50 text-slate-400 font-sans">SELECT</span>

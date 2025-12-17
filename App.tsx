@@ -70,9 +70,9 @@ const App: React.FC = () => {
       {/* Header Controls */}
       <div className="w-full max-w-4xl flex justify-between items-end mb-8 px-6">
         <div>
-           <h1 className="text-3xl font-black uppercase tracking-widest leading-none">Staff Area</h1>
+           <h1 className="text-3xl font-black uppercase tracking-widest leading-none">牛马请选座</h1>
            <p className="text-sm text-slate-500 font-bold mt-2 border-l-4 border-slate-900 pl-3">
-             24 SEATS / OPEN PLAN
+             24个座位 / 任君挑选
            </p>
         </div>
         <button
@@ -80,7 +80,7 @@ const App: React.FC = () => {
           className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-xs font-bold uppercase tracking-widest hover:bg-slate-700 transition-all shadow-lg hover:-translate-y-0.5"
         >
           {copied ? <Check size={16} /> : <Share2 size={16} />}
-          {copied ? 'Link Copied' : 'Share Layout'}
+          {copied ? '链接已复制' : '分享链接'}
         </button>
       </div>
 
@@ -99,7 +99,6 @@ const App: React.FC = () => {
           {/* Left Column */}
           <div className="flex flex-col gap-12 relative">
              <div className="absolute -left-8 top-0 bottom-0 border-l border-dashed border-slate-300"></div>
-             <span className="absolute -left-12 top-1/2 -rotate-90 text-xs text-slate-400 font-bold tracking-widest whitespace-nowrap">SECTION A</span>
              
              {leftZones.map(zone => (
                <Zone key={zone.id} zone={zone} seats={seats} onSeatClick={handleSeatClick} />
@@ -115,7 +114,6 @@ const App: React.FC = () => {
           {/* Right Column */}
           <div className="flex flex-col gap-12 relative">
              <div className="absolute -right-8 top-0 bottom-0 border-r border-dashed border-slate-300"></div>
-             <span className="absolute -right-12 top-1/2 rotate-90 text-xs text-slate-400 font-bold tracking-widest whitespace-nowrap">SECTION B</span>
 
              {rightZones.map(zone => (
                <Zone key={zone.id} zone={zone} seats={seats} onSeatClick={handleSeatClick} />
@@ -124,11 +122,11 @@ const App: React.FC = () => {
 
         </div>
 
-        {/* Scale/Info Footer */}
-        <div className="mt-12 pt-4 border-t-2 border-slate-900 flex justify-between items-center text-[50px] text-slate-500 font-bold uppercase tracking-wider relative z-10">
-            <span>大门 </span>
-            <span> </span>
-            <span> </span>
+        {/* Scale/Info Footer - Office Entrance */}
+        <div className="mt-12 flex flex-col items-center justify-center relative z-10">
+            {/* The door line - shortened to w-48 */}
+            <div className="w-48 h-2 bg-slate-900 mb-4"></div>
+            <span className="text-3xl text-slate-500 font-bold uppercase tracking-wider">办公室大门</span>
         </div>
 
       </div>
